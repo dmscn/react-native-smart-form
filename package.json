@@ -1,0 +1,48 @@
+{
+  "name": "react-native-smart-form",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "~27.0.0",
+    "react-native-scripts": "1.14.0",
+    "react-test-renderer": "16.3.1"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "expo": "^27.0.1",
+    "react": "16.3.1",
+    "react-native": "~0.55.2",
+    "yup": "^0.25.1"
+  },
+  "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmscn/react-native-smart-form.git"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "android",
+    "ios",
+    "form",
+    "validation",
+    "form-validation",
+    "masks"
+  ],
+  "author": "Leonardo Damasceno <leo.dsc@live.com> (https://github.com/dmscn/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmscn/react-native-smart-form/issues"
+  },
+  "homepage": "https://github.com/dmscn/react-native-smart-form#readme"
+}
