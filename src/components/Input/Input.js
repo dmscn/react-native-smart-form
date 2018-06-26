@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 import { Ionicons as Icon } from '@expo/vector-icons';
 
 import Colors from 'Colors';
@@ -13,17 +14,19 @@ import InputIcon from '../InputIcon/InputIcon'
 const ON_BLUR = "onBlur";
 const ON_CHANGE = "onChange";
 
-export default class Input extends Component {
+class Input extends Component {
 	state = {
-		selected: false,
-		state: 'default',
+    selected: false,
+    state: 'default',
     value: '',
   }
-  
-  componentWillMount() {
+
+  /* only for demo purpuses */
+  componentDidMount() {
     this.props.disabled && this.setState({ state: 'disabled' });
-    this.props.state && this.setState({ state: this.props.state })
+    this.props.state && this.setState({ state: this.props.state });
   }
+  /* end */
 
 	getValue = () => {
 		return this.state.value;
@@ -120,6 +123,16 @@ export default class Input extends Component {
 	}
 }
 
+Input.propTypes = {
+  validationMethod: PropTypes.oneOf(['onBlur', 'onChange']),
+  icon: PropTypes.element,
+  iconName: PropTypes.string,
+}
+
+Input.defaultProps = {
+  validationMethod: 'onBlur',
+}
+
 const styles = StyleSheet.create({	
 	inputContainer: {
     width: '80%',
@@ -135,3 +148,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
 	}
 });
+
+export default Input;

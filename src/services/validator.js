@@ -3,5 +3,3 @@
  * 
  * @returns status resulted from validation
  */
-
- 
